@@ -1,0 +1,55 @@
+.card{
+    @include spaceling($space);
+    @include colorized($background-color:$color-card-1);
+    width: 500px;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    &__img{
+        width:100%;
+        border-radius: 15px;
+    }
+    &__body{
+        @include spaceling(0, $space);
+    }
+    &__title{
+        @include colorized($color-secundary);
+        @include text-as(10px,$text-transform:uppercase);
+    }
+    &__subtitle{
+        @include spaceling($space 0);
+        @include colorized($color-secundary);
+        @include text-as(30px, lighter, $font-style:italic);
+    }
+    &__description{
+        @include colorized($color-third);
+        @include text-as(lighter);
+    }
+
+    &__footer{
+        @include spaceling(0, $space);
+        @include flex($justify-content:center);
+    }
+    &__button{
+        @include spaceling(0, $space - 5px);
+        @include colorized($color-secundary, $color-card-1);
+        @include text-as(14px);
+        border: 1px solid $color-secundary;
+        border-radius: 30px;
+        &:hover{
+            @include colorized($color-card-1, $color-secundary);
+        }
+    }
+    &--reverse{
+        @include colorized($background-color:$color-secundary);
+        .card__title, .card__subtitle{
+            @include colorized($color-card-1);
+        }
+        .card__button{
+            @include colorized($color-card-1, $color-secundary);
+            border: 1px solid $color-card-1;
+            &:hover{
+                @include colorized($color-secundary, $color-card-1);
+            }
+        }
+    }  
+}

@@ -1,0 +1,193 @@
+@charset "UTF-8";
+/* Reseteamos los margin y paddings de todas las etiquetas */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+/* Evitamos problemas con las imagenes */
+img, picture, video, iframe, figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  /* opcional */
+  -o-object-fit: cover;
+     object-fit: cover;
+  /* opcional */
+  -o-object-position: center center;
+     object-position: center center;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+}
+
+/* ... excepto los que se encuentran en párrafos */
+p a {
+  display: inline;
+}
+
+/* Quitamos los puntos de los <li> */
+li {
+  list-style-type: none;
+}
+
+/* Configuramos anclas suaves */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
+h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
+  font-size: 1em;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Nivelamos problemas de tipografías y colocación de formularios */
+form, input, textarea, select, button, label {
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+}
+
+/* Reseteamos las tablas */
+table, tr, td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Evitamos problemas con los SVG */
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+/* Configuramos la tipografía para toda la web y el body*/
+body {
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: normal;
+  color: #E5DED3;
+  background-color: #E5DED3;
+  font-size: 100%;
+  font-weight: lighter;
+  text-decoration: none;
+  text-align: initial;
+  font-style: initial;
+  text-transform: none;
+  min-height: 100vh;
+  max-width: 1440px;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.card {
+  margin: 20px;
+  padding: 0;
+  color: #E5DED3;
+  background-color: white;
+  width: 500px;
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+}
+.card__img {
+  width: 100%;
+  border-radius: 15px;
+}
+.card__body {
+  margin: 0;
+  padding: 20px;
+}
+.card__title {
+  color: #0D1623;
+  background-color: transparent;
+  font-size: 10px;
+  font-weight: normal;
+  text-decoration: none;
+  text-align: initial;
+  font-style: initial;
+  text-transform: uppercase;
+}
+.card__subtitle {
+  margin: 20px 0;
+  padding: 0;
+  color: #0D1623;
+  background-color: transparent;
+  font-size: 30px;
+  font-weight: lighter;
+  text-decoration: none;
+  text-align: initial;
+  font-style: italic;
+  text-transform: none;
+}
+.card__description {
+  color: #999;
+  background-color: transparent;
+  font-size: lighter;
+  font-weight: normal;
+  text-decoration: none;
+  text-align: initial;
+  font-style: initial;
+  text-transform: none;
+}
+.card__footer {
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: normal;
+}
+.card__button {
+  margin: 0;
+  padding: 15px;
+  color: #0D1623;
+  background-color: white;
+  font-size: 14px;
+  font-weight: normal;
+  text-decoration: none;
+  text-align: initial;
+  font-style: initial;
+  text-transform: none;
+  border: 1px solid #0D1623;
+  border-radius: 30px;
+}
+.card__button:hover {
+  color: white;
+  background-color: #0D1623;
+}
+.card--reverse {
+  color: #E5DED3;
+  background-color: #0D1623;
+}
+.card--reverse .card__title, .card--reverse .card__subtitle {
+  color: white;
+  background-color: transparent;
+}
+.card--reverse .card__button {
+  color: white;
+  background-color: #0D1623;
+  border: 1px solid white;
+}
+.card--reverse .card__button:hover {
+  color: #0D1623;
+  background-color: white;
+}/*# sourceMappingURL=main.css.map */
